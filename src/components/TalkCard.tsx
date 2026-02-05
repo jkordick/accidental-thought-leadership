@@ -41,6 +41,12 @@ export function TalkCard({ talk }: TalkCardProps) {
               {talk.conference.name}
             </a>
           </div>
+
+          {talk.abstract && (
+            <p className="text-gray-600 dark:text-gray-400 text-sm mt-2 line-clamp-3">
+              {talk.abstract}
+            </p>
+          )}
           
           {talk.tags.length > 0 && (
             <div className="flex flex-wrap gap-2 pt-2">

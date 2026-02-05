@@ -1,8 +1,8 @@
 import { getTalks } from "@/lib/talks";
 import { TalkCard } from "@/components/TalkCard";
 
-export default function Home() {
-  const talks = getTalks();
+export default async function Home() {
+  const talks = await getTalks();
 
   return (
     <main className="flex min-h-screen flex-col items-center py-12 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-zinc-950">

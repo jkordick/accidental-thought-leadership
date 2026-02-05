@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import * as cheerio from 'cheerio';
 
 export interface Talk {
   date: string;
@@ -11,9 +12,24 @@ export interface Talk {
   link: string; // The "Agenda" link from requirements, usually the talk link
   recording?: string;
   tags: string[];
+  abstract?: string;
 }
 
-export function getTalks(): Talk[] {
+export async function fetchAbstract(url: string): Promise<string | undefined> {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) return undefined;
+    const html = await response.text();
+    const $ = cheerio.load(html);
+    const description = $('meta[name="description"]').attr('content') ||
+                        $('meta[property="og:description"]').attr('content');
+    return description;
+  } catch {
+    return undefined; // Fail silently
+  }
+}
+
+export async function getTalks(): Promise<Talk[]> {
   const filePath = path.join(process.cwd(), 'talks.md');
   
   if (!fs.existsSync(filePath)) {
@@ -26,7 +42,7 @@ export function getTalks(): Talk[] {
   // We ignore the first split if it's empty (before the first h2)
   const sections = fileContent.split(/^## /m).filter(section => section.trim().length > 0 && !section.startsWith('# My Talks'));
 
-  const talks = sections.map(section => {
+  const parsedTalks = sections.map(section => {
     const lines = section.split('\n');
     
     // 1. Parse H2: "2024-05-20 | [React Conf 2024](https://react.dev/conf)"
@@ -93,6 +109,17 @@ export function getTalks(): Talk[] {
     return talk;
   }).filter((talk): talk is Talk => talk !== null);
 
+  // Fetch abstracts in parallel
+  const talksWithAbstracts = await Promise.all(parsedTalks.map(async (talk) => {
+    if (talk.link && talk.link.startsWith('http')) {
+      const abstract = await fetchAbstract(talk.link);
+      if (abstract) {
+        return { ...talk, abstract };
+      }
+    }
+    return talk;
+  }));
+
   // Sort by date descending
-  return talks.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return talksWithAbstracts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
