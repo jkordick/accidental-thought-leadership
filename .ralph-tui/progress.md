@@ -26,3 +26,12 @@ after each iteration and it's included in prompts for context.
   - TypeScript's `filter` needs a type predicate (`talk is Talk`) to correctly narrow `(Talk | null)[]` to `Talk[]`.
   - Next.js server-side file reading (`fs`) works well with `process.cwd()` to locate files in the project root.
 ---
+
+## 2026-02-05 - US-003
+- Created `src/components/TalkCard.tsx` to render individual talk details with proper visual hierarchy.
+- Updated `src/app/page.tsx` to fetch talks and render the chronological list.
+- Implemented responsive layout using Tailwind CSS.
+- **Learnings:**
+  - When formatting "YYYY-MM-DD" dates parsed from strings using `Intl.DateTimeFormat`, always specify `timeZone: 'UTC'` to prevent timezone shifts from displaying the previous day.
+  - Next.js App Router defaults to Server Components, allowing direct `fs` access in `page.tsx` without API routes.
+---
