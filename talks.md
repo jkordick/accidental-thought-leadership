@@ -97,6 +97,7 @@ Platform Engineers & DevOps Experts
 - Recording: [YouTube](https://www.youtube.com/watch?v=62OI_y-KRlw)
 - Location: Berlin, Germany
 - Language: 🇬🇧
+- Tags: COBOL, Agentic AI, Migration, Application Modernization, Software Development
 
 ## 2025-07-11 | [WeAreDevelopers World Congress 2025](https://www.wearedevelopers.com/world-congress)
 ### Boost your coding productivity with GitHub Copilot Agent

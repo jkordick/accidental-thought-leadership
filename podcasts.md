@@ -21,7 +21,7 @@ Abschließend werfen Dennis und Jan gemeinsam mit Julia einen Blick in die Zukun
 
 ## 2025-05-27 | [Die Cloud Optimizer](https://podcastcloudoptimizer.substack.com/)
 
-### Zwei Städte. Zwei Events. Eine Mission: Azure Community Stärken
+### Zwei Städte. Zwei Events. Eine Mission: Azure Community stärken
 
 - Abstract: In Folge 10 (DANKE!) nehmen Chris und Matthias dich mit auf gleich zwei Global Azure 2025 Events: den Community-Day im Microsoft Office Köln und das Bootcamp in Bergisch Gladbach.
 Gemeinsam mit Julia Kordick (Microsoft) und Florian Lenz (Azure Consultant) sprechen sie über die Organisation, Highlights und Learnings aus den Sessions – von Azure, KI über DevOps bis Compliance.
