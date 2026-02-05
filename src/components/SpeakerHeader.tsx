@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
 import { Speaker } from '@/lib/speaker';
 
 interface SpeakerHeaderProps {
@@ -68,12 +67,16 @@ export function SpeakerHeader({ speaker }: SpeakerHeaderProps) {
     ? speaker.bio.slice(0, BIO_CHAR_LIMIT).trim() + '...'
     : speaker.bio;
 
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  const photoSrc = speaker.photo?.startsWith('/') ? `${basePath}${speaker.photo}` : speaker.photo;
+
   return (
     <div className="flex flex-col sm:flex-row items-center gap-6 pb-8 border-b border-gray-200 dark:border-zinc-800">
       {speaker.photo && (
         <div className="shrink-0">
-          <Image
-            src={speaker.photo}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={photoSrc}
             alt={speaker.name}
             width={120}
             height={120}
