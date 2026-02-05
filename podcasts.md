@@ -4,6 +4,8 @@
 
 ### Deep Dive 200 – Coding Agents mit Julia Kordick
 
+- Image: https://www.programmier.bar/_vercel/image?url=https:%2F%2Fadmin.programmier.bar%2Fassets%2Fcb0e572c-42b3-443d-bad8-11c385e7fbca&w=768&q=80
+
 - Abstract: Coding-Agenten wie GitHub Copilot und der Agentic Mode unterstützen Entwickler:innen im Alltag. Warum aber nicht die reine Codegenerierung, sondern vor allem der richtige Kontext über ihren Erfolg entscheidet, besprechen wir mit Julia Kordick, Software Global Black Belt bei Microsoft. Erfahrt in dieser Folge, wie sich komplexe Themen zwischen Engineering und Management vermitteln lassen und warum es hilft, bestehende Systeme grundsätzlich zu hinterfragen – auch mittwochs mal das Patriarchat.
 
 Julia beschreibt, wie sie in ihrer Rolle die Brücke zwischen Entwicklungsteams und Management schlägt, Kund:innenfeedback in Produktverbesserungen übersetzt und den Einsatz von AI Coding Agents sowohl in großen Enterprise-Strukturen als auch in Start-ups begleitet. Wir erfahren, wie wir Workflows Schritt für Schritt aufsetzen, Agenten-Personas definieren und Multi-Agentic Workflows sinnvoll orchestrieren, ohne die Kontrolle über den Code zu verlieren.
