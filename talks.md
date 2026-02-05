@@ -61,7 +61,7 @@ Whether you're a seasoned COBOL developer or you're hearing about it for the fir
 - Abstract: This year, Github introduced the agent mode for GitHub Copilot in Visual Studio Code, announcing the general availability of Copilot Edits, and providing a first look at our SWE agent. In this talk, we will demonstrate the difference between the three modes and show the advantages to use the agent mode. In agent mode, Copilot will iterate on not just its own output, but the result of that output. And it will iterate until it has completed all the subtasks required to complete your prompt. Instead of performing just the task you requested, Copilot now has the ability to infer additional tasks that were not specified but are also necessary for the primary request to work.
 - Location: Berlin, Germany
 - Language: 🇬🇧
-- Tags: GitHub Copilot, AI Agents, Software Development
+- Tags: GitHub Copilot, Agentic AI, Software Development
 
 ## 2025-07-02 | [DWX - Developer Week '25](https://www.developer-world.de/dwx/dwx-programm)
 ### A (short) guide to Platform Engineering Excellence with Azure and GitHub
@@ -104,14 +104,14 @@ Platform Engineers & DevOps Experts
 - Location: Berlin, Germany
 - Language: 🇬🇧
 - Recording: [YouTube](https://www.youtube.com/watch?v=Pcpt-fldpo0)
-- Tags: GitHub Copilot, AI Agents, Software Development
+- Tags: GitHub Copilot, Agentic AI, Software Development
 
 ## 2025-10-15 | [Agent Con Cologne](https://globalai.community/chapters/cologne)
 ### Boost your coding productivity with GitHub Copilot Agent
 - Abstract: This year, GitHub introduced the agent mode for GitHub Copilot in Visual Studio Code, announcing the general availability of Copilot Edits, and providing a first look at our SWE agent. In this talk, we will demonstrate the difference between the three modes and show the advantages to use the agent mode. In agent mode, Copilot will iterate on not just its own output, but the result of that output. And it will iterate until it has completed all the subtasks required to complete your prompt. Instead of performing just the task you requested, Copilot now has the ability to infer additional tasks that were not specified but are also necessary for the primary request to work.
 - Location: Cologne, Germany
 - Language: 🇬🇧
-- Tags: GitHub Copilot, AI Agents, Software Development
+- Tags: GitHub Copilot, Agentic AI, Software Development
 
 ## 2025-10-16 | [Dev & Donuts](https://yasoon.de/dev-donuts/)
 ### Deployment & Architektur: Automatisieren oder Stabilisieren? - Das Release ist fertig – und jetzt?
@@ -128,3 +128,39 @@ In this talk we will show how GitHub Copilot supports real-world modernization w
 - Language: 🇬🇧
 - Tags: GitHub Copilot, Application Modernization, AI, Software Development
 
+## 2025-11-06 | [Microsoft AI Tour](https://aitour.microsoft.com/flow/microsoft/aitour/landing/page/home)
+### Driving reliability at scale with Azure SRE Agent
+- Location: Frankfurt, Germany
+- Language: 🇬🇧
+- Tags: Azure, SRE, Agentic AI
+
+## 2025-12-10 | [Cloud and AI Architects Connect](https://msit.events.teams.microsoft.com/event/3244a40e-8de6-4deb-84d4-1e0e8c1e883d@72f988bf-86f1-41af-91ab-2d7cd011db47)
+### Code the Future - GitHub, GitHub Copilot & Agentic AI – Weihnachts-Edition
+- Abstract: In dieser Session werden wir zeigen, wie sich GitHub Copilot von einem reinen Completion-Tool in der Entwicklungsumgebung zu einem tief integrierterten Agenten in der GitHub Plattform entwickelt hat. Wir starten mit einem Überblick und schauen uns dann die neuen Möglichkeiten von Prompt Files, Custom Agent Modes und MCP an. Anschließend betrachten wir, wie Agentic AI sich auf Security, DevOps und Day-2-Operations auswirkt. Zum Abschluss bleibt Zeit für Fragen und Austausch.
+
+Agenda:
+
+📢 Intro
+🐙 GitHub Plattform & Copilot
+🔄 GitHub Copilot: von Completion zu Agent Mode
+🧠 Agent Mode Deep Dive: Prompt Files, Custom Agent Modes, MCP + Context Engineering
+🤖 Agentic AI auf der GitHub Plattform
+🛠️ GHCP auf der GitHub Plattform: Issues, Pull-Request-Reviews, GitHub Copilot Autofix in GitHub Advanced Security
+❓ Q&A
+
+- Location: Remote
+- Language: 🇩🇪
+- Tags: GitHub, GitHub Copilot, Agentic AI, Software Development
+
+## 2025-09-25 | [Dev Women Cologne](https://www.kernpunkt.de/dev-women-cologne)
+### Panel Discussion: "I am more powerful than I think I am"
+- Location: Cologne, Germany
+- Language: 🇩🇪
+- Tags: Women in Tech, Panel Discussion, Empowerment
+
+## 2024-05-27 | [InfoDays](https://www.infodays.de/)
+### [Wie baue ich intelligente Apps mit Azure OpenAI](https://www.infodays.de/genai-bonn/programm/konferenzprogramm/wie-baue-ich-intelligente-apps-mit-azure-openai)
+- Abstract: In diesem Talk gehen wir direkt in die Praxis: Welche Möglichkeiten habe ich auf der Azure-Plattform, wenn ich sogenannte “intelligente Applikationen” entwickeln möchte? Welche Modelle kann ich für meine Zwecke nutzen, wann ist eine Eigenentwicklung sinnvoll und wann sind bereits existierende Copiloten die bessere Wahl. Zudem beleuchten wir, wie man Sicherheit und Compliance im Griff behält. 
+- Location: Bonn, Germany
+- Language: 🇩🇪
+- Tags: Azure, OpenAI, AI, Software Development

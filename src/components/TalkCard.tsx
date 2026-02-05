@@ -5,8 +5,9 @@ import { Talk } from '@/lib/talks';
 import { Podcast } from '@/lib/podcasts';
 import { Livestream } from '@/lib/livestreams';
 import { Workshop } from '@/lib/workshops';
+import { Blog } from '@/lib/blogs';
 
-export type Appearance = Talk | Podcast | Livestream | Workshop;
+export type Appearance = Talk | Podcast | Livestream | Workshop | Blog;
 
 interface TalkCardProps {
   item: Appearance;
@@ -28,6 +29,7 @@ export function TalkCard({ item }: TalkCardProps) {
   const isPodcast = item.type === 'podcast';
   const isLivestream = item.type === 'livestream';
   const isWorkshop = item.type === 'workshop';
+  const isBlog = item.type === 'blog';
   const abstract = item.abstract;
   const isLongAbstract = abstract && abstract.length > ABSTRACT_CHAR_LIMIT;
   const displayedAbstract = abstract && isLongAbstract && !isExpanded
@@ -35,21 +37,21 @@ export function TalkCard({ item }: TalkCardProps) {
     : abstract;
 
   // Unified venue info
-  const venueName = isPodcast ? item.show.name : isLivestream ? item.channel.name : item.conference.name;
-  const venueLink = isPodcast ? item.show.link : isLivestream ? item.channel.link : item.conference.link;
-  const venueLabel = isPodcast ? 'on' : isLivestream ? 'on' : 'at';
+  const venueName = isPodcast ? item.show.name : isLivestream ? item.channel.name : isBlog ? item.publication.name : item.conference.name;
+  const venueLink = isPodcast ? item.show.link : isLivestream ? item.channel.link : isBlog ? item.publication.link : item.conference.link;
+  const venueLabel = isPodcast ? 'on' : isLivestream ? 'on' : isBlog ? 'on' : 'at';
 
   // Get location for talks and livestreams
-  const location = isPodcast ? undefined : item.location;
+  const location = isPodcast || isBlog ? undefined : item.location;
   const language = item.language;
 
   // Links
   const agendaLink = isPodcast ? undefined : item.link;
-  const recordingLink = item.recording;
-  const linkedinLink = isPodcast || isLivestream ? undefined : item.linkedin;
+  const recordingLink = isBlog ? undefined : item.recording;
+  const linkedinLink = isPodcast || isLivestream || isBlog ? undefined : item.linkedin;
 
-  // Thumbnail image (podcasts and livestreams)
-  const thumbnailImage = isPodcast || isLivestream ? item.image : undefined;
+  // Thumbnail image (podcasts, livestreams, and blogs)
+  const thumbnailImage = (isPodcast || isLivestream || isBlog) ? item.image : undefined;
 
   return (
     <article className="relative border border-gray-200 dark:border-zinc-800 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow bg-white dark:bg-zinc-900 w-full">
@@ -85,6 +87,10 @@ export function TalkCard({ item }: TalkCardProps) {
             ) : isWorkshop ? (
               <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300">
                 Workshop
+              </span>
+            ) : isBlog ? (
+              <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300">
+                Blog
               </span>
             ) : (
               <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300">
@@ -155,7 +161,7 @@ export function TalkCard({ item }: TalkCardProps) {
                 rel="noopener noreferrer"
                 className="inline-flex justify-center items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-600 transition-colors"
               >
-                Agenda
+                {isBlog ? 'Read' : 'Agenda'}
               </a>
             )}
             {recordingLink && (

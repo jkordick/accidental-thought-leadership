@@ -15,4 +15,19 @@ Abschließend werfen Dennis und Jan gemeinsam mit Julia einen Blick in die Zukun
 - Language: 🇩🇪
 
 - Recording: [Listen](https://www.programmier.bar/podcast/deep-dive-200-coding-agents-mit-julia-kordick)
-- Tags: AI, Coding Agents, Software Development
+- Tags: AI, Agentic AI, Software Development
+
+## 2025-05-27 | [Die Cloud Optimizer](https://podcastcloudoptimizer.substack.com/)
+
+### Zwei Städte. Zwei Events. Eine Mission: Azure Community Stärken
+
+- Abstract: In Folge 10 (DANKE!) nehmen Chris und Matthias dich mit auf gleich zwei Global Azure 2025 Events: den Community-Day im Microsoft Office Köln und das Bootcamp in Bergisch Gladbach.
+Gemeinsam mit Julia Kordick (Microsoft) und Florian Lenz (Azure Consultant) sprechen sie über die Organisation, Highlights und Learnings aus den Sessions – von Azure, KI über DevOps bis Compliance.
+
+Außerdem:– Warum Raumfindung schwieriger ist als Speaker-Recruiting– Wie mit No-Shows und Catering umgegangen wurde– Was man aus einem doppelten Vortrags-Marathon lernt
+
+Gäste: Julia Kordick – Global Black Belt @ MicrosoftFlorian Lenz – Azure Consultant & Meetup-Veranstalter
+
+- Recording: [Listen](https://podcastcloudoptimizer.substack.com/p/zwei-stadte-zwei-events-eine-mission)
+- Language: 🇩🇪
+- Tags: Azure, Community, Events, DevOps, AI
