@@ -1,20 +1,27 @@
 import { getTalks } from "@/lib/talks";
+import { getSpeaker } from "@/lib/speaker";
 import { TalkCard } from "@/components/TalkCard";
+import { SpeakerHeader } from "@/components/SpeakerHeader";
 
 export default async function Home() {
   const talks = await getTalks();
+  const speaker = getSpeaker();
 
   return (
     <main className="flex min-h-screen flex-col items-center py-12 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-zinc-950">
       <div className="w-full max-w-4xl space-y-8">
-        <header className="text-center pb-8 border-b border-gray-200 dark:border-zinc-800">
+        <header className="text-center pb-4">
           <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
-            Speaking History
+            Accidental Thought Leadership
           </h1>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            A chronological collection of my conference talks, workshops, and public speaking events.
+            A chronological collection of Julia Kordick's public conference talks, workshops, and speaking events.
           </p>
         </header>
+
+        {speaker && (
+          <SpeakerHeader speaker={speaker} />
+        )}
 
         <div className="space-y-6 w-full">
           {talks.map((talk) => (

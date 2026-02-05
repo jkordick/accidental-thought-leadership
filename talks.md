@@ -1,21 +1,37 @@
 # My Talks
 
-## 2024-05-20 | [React Conf 2024](https://react.dev/conf)
+## 2024-10-23 | [AI Community Day Berlin](https://aicommunityday.de/)
 
-### [React Server Components from Scratch](https://react.dev/blog/2024/05/20/react-server-components)
+### Migrating from COBOL with GitHub Copilot: a moonshot demo
 
-- Recording: [YouTube](https://www.youtube.com/watch?v=T8TZQ6k4SLE)
-- Tags: React, Server Components, Architecture
+- Abstract: In this session I'll use a simplified example of COBOL - one of the oldest programming languages still in use - to finally put to rest the age-old question: can you modernize your legacy systems? Answer: with GitHub Copilot, you (finally) can.
 
-## 2023-10-26 | [Next.js Conf](https://nextjs.org/conf)
+We'll take a look at different activities - from understanding legacy code to generating new documentation - that come up in real-world migration projects and how GitHub Copilot can help with each one.
 
-### [The Future of the Web](https://nextjs.org/conf/speakers)
+Whether you're a seasoned COBOL dev or you're hearing about it for the first time right now come join me in this session to see how the past can (finally) meet the future with the help of AI.
+- Location: Berlin, Germany
+- Language: 🇬🇧
+- Tags: COBOL, GitHub Copilot, AI, Migration
 
-- Tags: Next.js, Web, Vercel
+## 2024-07-09 | [Technical Summit 2024](https://www.technicalsummit.de/2024/juli)
 
-## 2023-01-01 | [Local Meetup](https://example.com)
+### Navigating tools and paradigm shifts in the AI revolution: A new era for software development
 
-### [Getting Started with coding](https://example.com/slides)
+- Abstract: This keynote delves into the transformative influence of AI tools on the daily operations of software developers, potentially augmenting their productivity. We will examine the shifts in the cultural landscape, pinpoint the indispensable skills for thriving in an AI-dominated software development environment, and provide guidance on maneuvering through these changes. 
+- Location: Remote
+- Language: 🇩🇪
+- Tags: AI, Software Development, Future of Software Development
 
-- Recording: [Vimeo](https://vimeo.com)
-- Tags: Beginners, Career
+## 2025-03-19 | [Technical Summit 2025](https://www.technicalsummit.de/2025/march)
+
+### Migrating from COBOL with GitHub Copilot: a moonshot demo
+
+- Abstract: In this session I'll use a simplified example of COBOL - one of the oldest programming languages still in use - to finally put to rest the age-old question: can you modernize your legacy systems? Answer: with GitHub Copilot, you (finally) can.
+
+We'll take a look at different activities - from understanding legacy code to generating new documentation - that come up in real-world migration projects and how GitHub Copilot can help with each one.
+
+Whether you’re a seasoned COBOL dev or you're hearing about it for the first time right now come join me in this session to see how the past can (finally) meet the future with the help of AI.
+- Location: Munich, Germany
+- Language: 🇬🇧
+- Tags: COBOL, GitHub Copilot, AI, Migration
+

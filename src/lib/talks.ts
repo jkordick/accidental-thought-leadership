@@ -11,6 +11,9 @@ export interface Talk {
   title: string;
   link: string; // The "Agenda" link from requirements, usually the talk link
   recording?: string;
+  linkedin?: string;
+  language?: string;
+  location?: string;
   tags: string[];
   abstract?: string;
 }
@@ -59,18 +62,28 @@ export async function getTalks(): Promise<Talk[]> {
 
     const [, date, confName, confLink] = headerMatch;
 
-    // 2. Parse H3: "### [Talk Title](https://...)"
+    // 2. Parse H3: "### [Talk Title](https://...)" or "### Talk Title"
     // It might not be immediately the second line, so let's search for the line starting with "### "
     const titleLine = lines.find(line => line.trim().startsWith('### '));
     let title = '';
     let link = '';
     
     if (titleLine) {
-      const titleRegex = /###\s*\[(.*?)\]\((.*?)\)/;
-      const titleMatch = titleLine.match(titleRegex);
-      if (titleMatch) {
-        title = titleMatch[1];
-        link = titleMatch[2];
+      // First try to match a link format: ### [Title](url)
+      const titleLinkRegex = /###\s*\[(.*?)\]\((.*?)\)/;
+      const titleLinkMatch = titleLine.match(titleLinkRegex);
+      
+      if (titleLinkMatch) {
+        title = titleLinkMatch[1];
+        link = titleLinkMatch[2];
+      } else {
+        // Fall back to plain heading: ### Title
+        const titlePlainRegex = /###\s*(.+)/;
+        const titlePlainMatch = titleLine.match(titlePlainRegex);
+        if (titlePlainMatch) {
+          title = titlePlainMatch[1].trim();
+          link = '';
+        }
       }
     }
 
@@ -86,6 +99,18 @@ export async function getTalks(): Promise<Talk[]> {
       }
     }
 
+    // 3b. Parse LinkedIn (Optional)
+    // Look for line starting with "- LinkedIn:"
+    const linkedinLine = lines.find(line => line.trim().startsWith('- LinkedIn:'));
+    let linkedin: string | undefined;
+    if (linkedinLine) {
+      const linkedinRegex = /\[(.*?)\]\((.*?)\)/;
+      const linkedinMatch = linkedinLine.match(linkedinRegex);
+      if (linkedinMatch) {
+        linkedin = linkedinMatch[2];
+      }
+    }
+
     // 4. Parse Tags
     // Look for line starting with "- Tags:"
     const tagsLine = lines.find(line => line.trim().startsWith('- Tags:'));
@@ -93,6 +118,52 @@ export async function getTalks(): Promise<Talk[]> {
     if (tagsLine) {
       const tagsContent = tagsLine.replace(/^- Tags:\s*/, '');
       tags = tagsContent.split(',').map(t => t.trim());
+    }
+
+    // 4b. Parse Language (Optional)
+    // Look for line starting with "- Language:"
+    const languageLine = lines.find(line => line.trim().startsWith('- Language:'));
+    let language: string | undefined;
+    if (languageLine) {
+      language = languageLine.replace(/^- Language:\s*/, '').trim();
+    }
+
+    // 4c. Parse Location (Optional)
+    // Look for line starting with "- Location:"
+    const locationLine = lines.find(line => line.trim().startsWith('- Location:'));
+    let location: string | undefined;
+    if (locationLine) {
+      location = locationLine.replace(/^- Location:\s*/, '').trim();
+    }
+
+    // 5. Parse Abstract (Optional)
+    // Look for line starting with "- Abstract:" - content may span multiple paragraphs
+    const abstractLineIndex = lines.findIndex(line => line.trim().startsWith('- Abstract:'));
+    let abstract: string | undefined;
+    if (abstractLineIndex !== -1) {
+      const abstractLine = lines[abstractLineIndex];
+      const abstractParts: string[] = [];
+      const firstPart = abstractLine.replace(/^- Abstract:\s*/, '').trim();
+      if (firstPart) {
+        abstractParts.push(firstPart);
+      }
+      
+      // Continue reading lines until we hit another list item or heading
+      for (let i = abstractLineIndex + 1; i < lines.length; i++) {
+        const nextLine = lines[i].trim();
+        // Stop if we hit another list item or heading
+        if (nextLine.startsWith('- ') || nextLine.startsWith('##')) {
+          break;
+        }
+        // Include non-empty lines (skip empty lines but continue looking)
+        if (nextLine !== '') {
+          abstractParts.push(nextLine);
+        }
+      }
+      
+      if (abstractParts.length > 0) {
+        abstract = abstractParts.join('\n\n');
+      }
     }
 
     const talk: Talk = {
@@ -104,14 +175,19 @@ export async function getTalks(): Promise<Talk[]> {
       title,
       link,
       recording,
-      tags
+      linkedin,
+      language,
+      location,
+      tags,
+      abstract
     };
     return talk;
   }).filter((talk): talk is Talk => talk !== null);
 
-  // Fetch abstracts in parallel
+  // Fetch abstracts in parallel (only if no inline abstract was provided)
   const talksWithAbstracts = await Promise.all(parsedTalks.map(async (talk) => {
-    if (talk.link && talk.link.startsWith('http')) {
+    // Only fetch if no inline abstract and there's a link
+    if (!talk.abstract && talk.link && talk.link.startsWith('http')) {
       const abstract = await fetchAbstract(talk.link);
       if (abstract) {
         return { ...talk, abstract };
