@@ -3,6 +3,7 @@ import path from 'path';
 import * as cheerio from 'cheerio';
 
 export interface Talk {
+  type: 'talk';
   date: string;
   conference: {
     name: string;
@@ -167,6 +168,7 @@ export async function getTalks(): Promise<Talk[]> {
     }
 
     const talk: Talk = {
+      type: 'talk',
       date,
       conference: {
         name: confName,
