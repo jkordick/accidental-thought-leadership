@@ -3,8 +3,10 @@
 import React, { useState } from 'react';
 import { Talk } from '@/lib/talks';
 import { Podcast } from '@/lib/podcasts';
+import { Livestream } from '@/lib/livestreams';
+import { Workshop } from '@/lib/workshops';
 
-export type Appearance = Talk | Podcast;
+export type Appearance = Talk | Podcast | Livestream | Workshop;
 
 interface TalkCardProps {
   item: Appearance;
@@ -24,6 +26,8 @@ export function TalkCard({ item }: TalkCardProps) {
   }).format(date);
 
   const isPodcast = item.type === 'podcast';
+  const isLivestream = item.type === 'livestream';
+  const isWorkshop = item.type === 'workshop';
   const abstract = item.abstract;
   const isLongAbstract = abstract && abstract.length > ABSTRACT_CHAR_LIMIT;
   const displayedAbstract = abstract && isLongAbstract && !isExpanded
@@ -31,21 +35,21 @@ export function TalkCard({ item }: TalkCardProps) {
     : abstract;
 
   // Unified venue info
-  const venueName = isPodcast ? item.show.name : item.conference.name;
-  const venueLink = isPodcast ? item.show.link : item.conference.link;
-  const venueLabel = isPodcast ? 'on' : 'at';
+  const venueName = isPodcast ? item.show.name : isLivestream ? item.channel.name : item.conference.name;
+  const venueLink = isPodcast ? item.show.link : isLivestream ? item.channel.link : item.conference.link;
+  const venueLabel = isPodcast ? 'on' : isLivestream ? 'on' : 'at';
 
-  // Get location for talks
+  // Get location for talks and livestreams
   const location = isPodcast ? undefined : item.location;
   const language = item.language;
 
   // Links
   const agendaLink = isPodcast ? undefined : item.link;
   const recordingLink = item.recording;
-  const linkedinLink = isPodcast ? undefined : item.linkedin;
+  const linkedinLink = isPodcast || isLivestream ? undefined : item.linkedin;
 
-  // Podcast image
-  const podcastImage = isPodcast ? item.image : undefined;
+  // Thumbnail image (podcasts and livestreams)
+  const thumbnailImage = isPodcast || isLivestream ? item.image : undefined;
 
   return (
     <article className="relative border border-gray-200 dark:border-zinc-800 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow bg-white dark:bg-zinc-900 w-full">
@@ -55,10 +59,10 @@ export function TalkCard({ item }: TalkCardProps) {
         </span>
       )}
       <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
-        {podcastImage && (
+        {thumbnailImage && (
           <div className="shrink-0">
             <img 
-              src={podcastImage} 
+              src={thumbnailImage} 
               alt={`${venueName} episode thumbnail`}
               className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-lg"
             />
@@ -73,6 +77,14 @@ export function TalkCard({ item }: TalkCardProps) {
             {isPodcast ? (
               <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300">
                 Podcast
+              </span>
+            ) : isLivestream ? (
+              <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300">
+                Livestream
+              </span>
+            ) : isWorkshop ? (
+              <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300">
+                Workshop
               </span>
             ) : (
               <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300">
@@ -153,7 +165,7 @@ export function TalkCard({ item }: TalkCardProps) {
                 rel="noopener noreferrer"
                 className="inline-flex justify-center items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-zinc-800 dark:text-gray-200 dark:border-zinc-700 dark:hover:bg-zinc-700 transition-colors"
               >
-                {isPodcast ? 'Listen' : 'Recording'}
+                {isPodcast ? 'Listen' : isLivestream ? 'Watch' : 'Recording'}
               </a>
             )}
             {linkedinLink && (

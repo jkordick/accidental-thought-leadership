@@ -1,15 +1,17 @@
 import { getTalks } from "@/lib/talks";
 import { getPodcasts } from "@/lib/podcasts";
+import { getLivestreams } from "@/lib/livestreams";
+import { getWorkshops } from "@/lib/workshops";
 import { getSpeaker } from "@/lib/speaker";
 import { TalkCard, Appearance } from "@/components/TalkCard";
 import { SpeakerHeader } from "@/components/SpeakerHeader";
 
 export default async function Home() {
-  const [talks, podcasts] = await Promise.all([getTalks(), getPodcasts()]);
+  const [talks, podcasts, livestreams, workshops] = await Promise.all([getTalks(), getPodcasts(), getLivestreams(), getWorkshops()]);
   const speaker = getSpeaker();
 
   // Merge and sort by date descending
-  const appearances: Appearance[] = [...talks, ...podcasts].sort(
+  const appearances: Appearance[] = [...talks, ...podcasts, ...livestreams, ...workshops].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 
