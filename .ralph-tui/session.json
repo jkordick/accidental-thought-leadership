@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "sessionId": "5bd7a543-594c-4f5b-acf4-17f244a1ccb6",
+  "status": "running",
+  "startedAt": "2026-02-05T09:41:51.697Z",
+  "updatedAt": "2026-02-05T09:47:06.237Z",
+  "currentIteration": 0,
+  "maxIterations": 10,
+  "tasksCompleted": 0,
+  "isPaused": false,
+  "agentPlugin": "opencode",
+  "trackerState": {
+    "plugin": "json",
+    "prdPath": "./tasks/prd.json",
+    "totalTasks": 5,
+    "tasks": [
+      {
+        "id": "US-001",
+        "title": "Initialize Next.js Application",
+        "status": "open",
+        "completedInSession": false
+      },
+      {
+        "id": "US-002",
+        "title": "Implement Markdown Data Source",
+        "status": "open",
+        "completedInSession": false
+      },
+      {
+        "id": "US-003",
+        "title": "Create Chronological Talk List",
+        "status": "open",
+        "completedInSession": false
+      },
+      {
+        "id": "US-004",
+        "title": "Implement Topic Tagging",
+        "status": "open",
+        "completedInSession": false
+      },
+      {
+        "id": "US-005",
+        "title": "Automated Abstract Retrieval",
+        "status": "open",
+        "completedInSession": false
+      }
+    ]
+  },
+  "iterations": [],
+  "skippedTaskIds": [],
+  "cwd": "/Users/jkordick/Documents/dev/private/accidental-thought-leadership",
+  "activeTaskIds": [],
+  "subagentPanelVisible": false
+}
