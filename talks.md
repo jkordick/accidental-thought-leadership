@@ -165,3 +165,14 @@ Agenda:
 - Location: Bonn, Germany
 - Language: 🇩🇪
 - Tags: Azure, OpenAI, AI, Software Development
+
+## 2026-02-10 | [Azure AI Frontier Day](https://msevents.microsoft.com/event?id=4197499125)
+### Software Engineering in the Era of AI: A Reality Check
+- Abstract: Agentic AI is reshaping how we build software, but we are far from the fully autonomous developer utopias that keynote slides love to promise. This talk takes a reality check on where we actually are. We will look at how AI in coding has moved from simple completions to true agentic workflows that can read, reason, refactor, and collaborate with humans.
+ 
+From there, we trace the evolution from DevOps to Platform Engineering and now to Agentic DevOps, where automated systems take over the repetitive, high-context operational work that has slowed teams down for years. The talk highlights what is real today, what still breaks in production, and what guardrails strong engineering cultures must keep in place.
+ 
+Finally, we open the window to what might come next. Not hype. Not science fiction. Just a grounded vision of agentic systems that understand architecture, navigate complexity, and help organizations move from reactive firefighting to proactive, AI-supported engineering.
+- Location: Cologne, Germany
+- Language: 🇩🇪
+- Tags: Agentic AI, Software Development, DevOps, Platform Engineering, Developer Experience
