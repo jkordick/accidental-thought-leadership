@@ -1,6 +1,6 @@
 # My Livestreams
 
-## 2025-01-15 | [WeAreDevelopers](https://www.youtube.com/@_wearedevs)
+## 2025-08-07 | [WeAreDevelopers](https://www.youtube.com/@_wearedevs)
 
 ### WeAreDevelopers LIVE - The weekly developer show: COBOL to Cloud, Legacy Code and AI Copilots
 
