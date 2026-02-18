@@ -32,6 +32,20 @@ export default async function Home() {
           <SpeakerHeader speaker={speaker} />
         )}
 
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 w-full text-sm text-gray-500 dark:text-gray-400">
+          {[
+            { label: 'Talks', count: talks.length },
+            { label: 'Workshops', count: workshops.length },
+            { label: 'Podcasts', count: podcasts.length },
+            { label: 'Livestreams', count: livestreams.length },
+            { label: 'Blogs', count: blogs.length },
+          ].map(({ label, count }) => (
+            <span key={label}>
+              <span className="font-semibold text-gray-700 dark:text-gray-300">{count}</span> {label}
+            </span>
+          ))}
+        </div>
+
         <div className="space-y-6 w-full">
           {appearances.map((item) => (
             <TalkCard key={`${item.date}-${item.title}`} item={item} />
