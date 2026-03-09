@@ -176,3 +176,10 @@ Finally, we open the window to what might come next. Not hype. Not science ficti
 - Location: Cologne, Germany
 - Language: 🇩🇪
 - Tags: Agentic AI, Software Development, DevOps, Platform Engineering, Developer Experience
+
+## 2026-02-25 | [Microsoft AI Tour](https://aitour.microsoft.com/flow/microsoft/aitour/landing/page/home)
+### [GitHub Copilot as an AI Agent in the Developer Workflow](https://aitour.microsoft.com/flow/microsoft/munich26/sessioncatalog/page/sessioncatalog/session/1762292633457001B9gk)
+- Abstract: See how GitHub Copilot exhibits agent-like behavior in real dev workflows, planning, executing multi-step tasks, and integrating deeply into engineering processes. Go beyond autocomplete with practical examples from real-world use.
+- Location: Munich, Germany
+- Language: 🇩🇪
+- Tags: GitHub Copilot, Agentic AI, Software Development, Developer Experience
