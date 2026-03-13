@@ -183,3 +183,21 @@ Finally, we open the window to what might come next. Not hype. Not science ficti
 - Location: Munich, Germany
 - Language: 🇩🇪
 - Tags: GitHub Copilot, Agentic AI, Software Development, Developer Experience
+
+## 2026-03-12 | [DevLand](https://www.devland.eu/)
+### [Boost your coding productivity with Agentic AI](https://meine.doag.org/events/devland/2026/agenda/#agendaId.7009)
+- Abstract: This year, GitHub introduced the agent mode for GitHub Copilot in Visual Studio Code, announcing the general availability of Copilot Edits, and providing a first look at our SWE agent. In this talk, we will demonstrate the difference between the three modes and show the advantages to use the agent mode. In agent mode, Copilot will iterate on not just its own output, but the result of that output. And it will iterate until it has completed all the subtasks required to complete your prompt. Instead of performing just the task you requested, Copilot now has the ability to infer additional tasks that were not specified but are also necessary for the primary request to work.
+- Location: Rust, Germany
+- Language: 🇬🇧
+- Tags: GitHub Copilot, Agentic AI, Software Development
+
+## 2026-03-12 | [DevLand](https://www.devland.eu/)
+### [Women in Tech - Podiumsdiskussion](https://meine.doag.org/events/devland/2026/agenda/#agendaId.7499)
+- Abstract: Viele Unternehmen beklagen den Fachkräftemangel und suchen händeringend nach Entwicklerinnen. Doch die eigentliche Herausforderung beginnt erst nach der Einstellung: Wie halten wir Frauen in der IT? Und warum verlassen sie die Branche signifikant häufiger als ihre männlichen Kollegen?
+In diesem Panel diskutieren Expertinnen über die Hürden, denen Frauen in unserer Arbeitskultur begegnen. Wir beleuchten konkrete Beispiele aus dem Projektalltag – insbesondere im Hinblick auf unbewusste Verhaltensweisen. Ziel der Diskussion ist es, vom bloßen „Problembewusstsein“ zur echten „Handlungskompetenz“ zu kommen: Was können Teamleads, Kollegen und Unternehmen tun, um ein Umfeld zu schaffen, in dem Frauen in der IT nicht nur „überleben“, sondern wachsen und führen können?
+Teilnehmerinnen: Ildikó Tárkányi, Marissa Hofmann und Julia Kordick
+Moderatorin: Inga Glotzbach
+- Location: Rust, Germany
+- Language: 🇩🇪
+- Tags: Diversity, Women in Tech, Feminism
+
