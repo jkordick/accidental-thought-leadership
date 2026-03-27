@@ -201,3 +201,9 @@ Moderatorin: Inga Glotzbach
 - Language: 🇩🇪
 - Tags: Diversity, Women in Tech, Feminism
 
+## 2026-03-25 | [Microsoft DevX EMEA - EMEA Developer Summit](https://msevents.microsoft.com/event?id=4197418354) 
+### Platforms, Tooling, and Guardrails - Build the technical foundation to scale agentic AI in your organization
+- Abstract: How platform engineering and DevEx enable developers and agentic AI on scale.
+- Location: Remote
+- Language: 🇬🇧
+- Tags: Agentic AI, Software Development, Developer Experience, Platform Engineering
