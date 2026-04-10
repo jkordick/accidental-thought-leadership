@@ -207,3 +207,13 @@ Moderatorin: Inga Glotzbach
 - Location: Remote
 - Language: 🇬🇧
 - Tags: Agentic AI, Software Development, Developer Experience, Platform Engineering
+
+## 2026-04-09 | [programmier.bar Meetup](https://www.programmier.bar/meetup)
+### [(K)einen Mehrwert durch Agentic Coding? – Wo Agentic AI im Software Development Lifecycle wirklich hilft (und wo nicht)](https://www.programmier.bar/meetup/keinen-mehrwert-durch-agentic-coding)
+- Abstract: Agentic AI verspricht grenzenlose Produktivität in der Softwareentwicklung. In der Praxis scheitert sie jedoch oft an fehlendem Vertrauen, überdrehten Sales-Narrativen und, ja, unserem eigenen Entwickler:innen-Ego.
+
+In diesem Talk schauen wir nüchtern darauf, wo Agentic Coding im SDLC echten Mehrwert liefert, warum menschliche Expertise dafür unverzichtbar bleibt und wie du die Technologie so einsetzen kannst, dass sie nicht frustriert, sondern tatsächlich Spaß macht.
+- Location: Bad Nauheim, Germany
+- Language: 🇩🇪
+- Slides: [Slides](/slides/programmier_bar_meetup.pdf)
+- Tags: Agentic AI, Software Development, Developer Experience

@@ -49,6 +49,7 @@ export function TalkCard({ item }: TalkCardProps) {
   const agendaLink = isPodcast ? undefined : item.link;
   const recordingLink = isBlog ? undefined : item.recording;
   const linkedinLink = isPodcast || isLivestream || isBlog ? undefined : item.linkedin;
+  const slidesLink = item.type === 'talk' ? item.slides : undefined;
 
   // Thumbnail image (podcasts, livestreams, and blogs)
   const thumbnailImage = (isPodcast || isLivestream || isBlog) ? item.image : undefined;
@@ -152,7 +153,7 @@ export function TalkCard({ item }: TalkCardProps) {
           )}
         </div>
         
-        {(agendaLink || recordingLink || linkedinLink) && (
+        {(agendaLink || recordingLink || linkedinLink || slidesLink) && (
           <div className="flex flex-row md:flex-col gap-3 shrink-0 pt-2 md:pt-0">
             {agendaLink && (
               <a
@@ -182,6 +183,16 @@ export function TalkCard({ item }: TalkCardProps) {
                 className="inline-flex justify-center items-center px-4 py-2 text-sm font-medium text-white bg-[#0A66C2] rounded-md hover:bg-[#004182] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0A66C2] transition-colors"
               >
                 LinkedIn
+              </a>
+            )}
+            {slidesLink && (
+              <a
+                href={slidesLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex justify-center items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-zinc-800 dark:text-gray-200 dark:border-zinc-700 dark:hover:bg-zinc-700 transition-colors"
+              >
+                Slides
               </a>
             )}
           </div>

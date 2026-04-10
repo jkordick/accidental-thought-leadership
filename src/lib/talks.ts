@@ -13,6 +13,7 @@ export interface Talk {
   link: string; // The "Agenda" link from requirements, usually the talk link
   recording?: string;
   linkedin?: string;
+  slides?: string;
   language?: string;
   location?: string;
   tags: string[];
@@ -112,6 +113,18 @@ export async function getTalks(): Promise<Talk[]> {
       }
     }
 
+    // 3c. Parse Slides (Optional)
+    // Look for line starting with "- Slides:"
+    const slidesLine = lines.find(line => line.trim().startsWith('- Slides:'));
+    let slides: string | undefined;
+    if (slidesLine) {
+      const slidesRegex = /\[(.*?)\]\((.*?)\)/;
+      const slidesMatch = slidesLine.match(slidesRegex);
+      if (slidesMatch) {
+        slides = slidesMatch[2];
+      }
+    }
+
     // 4. Parse Tags
     // Look for line starting with "- Tags:"
     const tagsLine = lines.find(line => line.trim().startsWith('- Tags:'));
@@ -178,6 +191,7 @@ export async function getTalks(): Promise<Talk[]> {
       link,
       recording,
       linkedin,
+      slides,
       language,
       location,
       tags,
