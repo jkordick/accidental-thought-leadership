@@ -51,6 +51,7 @@ export function TalkCard({ item }: TalkCardProps) {
   const linkedinLink = isPodcast || isLivestream || isBlog ? undefined : item.linkedin;
   const slidesLink = item.type === 'talk' ? item.slides : undefined;
   const repoLink = item.type === 'talk' ? item.repository : undefined;
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   // Thumbnail image (podcasts, livestreams, and blogs)
   const thumbnailImage = (isPodcast || isLivestream || isBlog) ? item.image : undefined;
@@ -193,7 +194,7 @@ export function TalkCard({ item }: TalkCardProps) {
             )}
             {slidesLink && (
               <a
-                href={slidesLink}
+                href={slidesLink.startsWith('/') ? `${basePath}${slidesLink}` : slidesLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex justify-center items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-600 transition-colors"
