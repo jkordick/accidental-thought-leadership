@@ -50,6 +50,7 @@ export function TalkCard({ item }: TalkCardProps) {
   const recordingLink = isBlog ? undefined : item.recording;
   const linkedinLink = isPodcast || isLivestream || isBlog ? undefined : item.linkedin;
   const slidesLink = item.type === 'talk' ? item.slides : undefined;
+  const repoLink = item.type === 'talk' ? item.repository : undefined;
 
   // Thumbnail image (podcasts, livestreams, and blogs)
   const thumbnailImage = (isPodcast || isLivestream || isBlog) ? item.image : undefined;
@@ -101,7 +102,18 @@ export function TalkCard({ item }: TalkCardProps) {
           </div>
           
           <h2 className="text-xl font-bold text-gray-900 dark:text-white leading-tight">
-            {item.title}
+            {agendaLink ? (
+              <a
+                href={agendaLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >
+                {item.title}
+              </a>
+            ) : (
+              item.title
+            )}
           </h2>
           
           <div className="text-base text-gray-700 dark:text-gray-300">
@@ -153,24 +165,18 @@ export function TalkCard({ item }: TalkCardProps) {
           )}
         </div>
         
-        {(agendaLink || recordingLink || linkedinLink || slidesLink) && (
+        {(recordingLink || linkedinLink || slidesLink || repoLink) && (
           <div className="flex flex-row md:flex-col gap-3 shrink-0 pt-2 md:pt-0">
-            {agendaLink && (
-              <a
-                href={agendaLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex justify-center items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-600 transition-colors"
-              >
-                {isBlog ? 'Read' : 'Agenda'}
-              </a>
-            )}
             {recordingLink && (
               <a
                 href={recordingLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex justify-center items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-zinc-800 dark:text-gray-200 dark:border-zinc-700 dark:hover:bg-zinc-700 transition-colors"
+                className={`inline-flex justify-center items-center px-4 py-2 text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors ${
+                  isPodcast || isLivestream
+                    ? 'text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600'
+                    : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 dark:bg-zinc-800 dark:text-gray-200 dark:border-zinc-700 dark:hover:bg-zinc-700'
+                }`}
               >
                 {isPodcast ? 'Listen' : isLivestream ? 'Watch' : 'Recording'}
               </a>
@@ -190,9 +196,19 @@ export function TalkCard({ item }: TalkCardProps) {
                 href={slidesLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex justify-center items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-zinc-800 dark:text-gray-200 dark:border-zinc-700 dark:hover:bg-zinc-700 transition-colors"
+                className="inline-flex justify-center items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-600 transition-colors"
               >
                 Slides
+              </a>
+            )}
+            {repoLink && (
+              <a
+                href={repoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex justify-center items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-zinc-800 dark:text-gray-200 dark:border-zinc-700 dark:hover:bg-zinc-700 transition-colors"
+              >
+                Repo
               </a>
             )}
           </div>

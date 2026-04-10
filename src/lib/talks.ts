@@ -14,6 +14,7 @@ export interface Talk {
   recording?: string;
   linkedin?: string;
   slides?: string;
+  repository?: string;
   language?: string;
   location?: string;
   tags: string[];
@@ -125,6 +126,18 @@ export async function getTalks(): Promise<Talk[]> {
       }
     }
 
+    // 3d. Parse Repo (Optional)
+    // Look for line starting with "- Repo:"
+    const repoLine = lines.find(line => line.trim().startsWith('- Repo:'));
+    let repository: string | undefined;
+    if (repoLine) {
+      const repoRegex = /\[(.*?)\]\((.*?)\)/;
+      const repoMatch = repoLine.match(repoRegex);
+      if (repoMatch) {
+        repository = repoMatch[2];
+      }
+    }
+
     // 4. Parse Tags
     // Look for line starting with "- Tags:"
     const tagsLine = lines.find(line => line.trim().startsWith('- Tags:'));
@@ -192,6 +205,7 @@ export async function getTalks(): Promise<Talk[]> {
       recording,
       linkedin,
       slides,
+      repository,
       language,
       location,
       tags,

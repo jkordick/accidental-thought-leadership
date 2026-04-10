@@ -216,4 +216,5 @@ In diesem Talk schauen wir nüchtern darauf, wo Agentic Coding im SDLC echten Me
 - Location: Bad Nauheim, Germany
 - Language: 🇩🇪
 - Slides: [Slides](/slides/programmier_bar_meetup.pdf)
+- Repo: [GitHub](https://github.com/jkordick/programmier_bar)
 - Tags: Agentic AI, Software Development, Developer Experience
