@@ -24,3 +24,8 @@
 
 - Language: 🇩🇪
 - Tags: Clean Code, Software Development, Code Quality
+
+## 2026-04-22 | [yasoon](https://yasoon.de/)
+### [Interview mit Julia Kordick, Global Black Belt bei Microsoft](https://yasoon.de/interview-mit-julia-kordick-global-black-belt-fuer-developer-experience-und-productivity-bei-microsoft/)
+- Language: 🇩🇪
+- Tags: Women in Tech, Career, Feminism, Personal Development
