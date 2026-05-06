@@ -50,7 +50,7 @@ export function TalkCard({ item }: TalkCardProps) {
   const recordingLink = isBlog ? undefined : item.recording;
   const linkedinLink = isPodcast || isLivestream || isBlog ? undefined : item.linkedin;
   const slidesLink = item.type === 'talk' ? item.slides : undefined;
-  const repoLink = item.type === 'talk' ? item.repository : undefined;
+  const repoLink = (item.type === 'talk' || item.type === 'workshop') ? item.repository : undefined;
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   // Thumbnail image (podcasts, livestreams, and blogs)

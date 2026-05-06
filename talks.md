@@ -218,3 +218,10 @@ In diesem Talk schauen wir nüchtern darauf, wo Agentic Coding im SDLC echten Me
 - Slides: [Slides](/slides/programmier_bar_meetup.pdf)
 - Repo: [GitHub](https://github.com/jkordick/programmier_bar)
 - Tags: Agentic AI, Software Development, Developer Experience
+
+## 2026-05-05 | [Microsoft Agentic AI & DevOps Day](https://www.microsoft.com/de-de/techwiese/news/agentic-ai--devops-day-strategien-fuer-autonome-softwareentwicklung.aspx)
+### DevOps‑Transformation mit KI & GitHub Copilot
+- Abstract: KI im Software‑Lifecycle einsetzen, Workflows automatisieren und Entwicklerproduktivität steigern.
+- Location: Munich, Germany
+- Language: 🇩🇪
+- Tags: Agentic AI, DevOps, GitHub Copilot, Software Development, Platform Engineering, Developer Experience

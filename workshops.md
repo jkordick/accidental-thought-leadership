@@ -12,3 +12,11 @@
 - Location: San Francisco, USA
 - Language: 🇬🇧
 - Tags: Application Modernization, Cloud Migration, Azure, GitHub Copilot
+
+## 2026-05-05 | [Microsoft Agentic AI & DevOps Day](https://www.microsoft.com/de-de/techwiese/news/agentic-ai--devops-day-strategien-fuer-autonome-softwareentwicklung.aspx)
+### GitHub Copilot Workshop
+- Abstract: KI‑gestützte Entwicklung entlang des gesamten Software‑Lifecycles – von der ersten Codezeile bis zur produktiven Anwendung.
+- Repo: [GitHub](https://github.com/Philess/gh-copilot-demo)
+- Location: Munich, Germany
+- Language: 🇩🇪
+- Tags: Agentic AI, GitHub Copilot, Software Development

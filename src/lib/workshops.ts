@@ -13,6 +13,7 @@ export interface Workshop {
   link: string;
   recording?: string;
   linkedin?: string;
+  repository?: string;
   language?: string;
   location?: string;
   tags: string[];
@@ -98,6 +99,16 @@ export async function getWorkshops(): Promise<Workshop[]> {
       }
     }
 
+    const repoLine = lines.find(line => line.trim().startsWith('- Repo:'));
+    let repository: string | undefined;
+    if (repoLine) {
+      const repoRegex = /\[(.*?)\]\((.*?)\)/;
+      const repoMatch = repoLine.match(repoRegex);
+      if (repoMatch) {
+        repository = repoMatch[2];
+      }
+    }
+
     const tagsLine = lines.find(line => line.trim().startsWith('- Tags:'));
     let tags: string[] = [];
     if (tagsLine) {
@@ -153,6 +164,7 @@ export async function getWorkshops(): Promise<Workshop[]> {
       link,
       recording,
       linkedin,
+      repository,
       language,
       location,
       tags,
