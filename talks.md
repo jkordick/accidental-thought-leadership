@@ -228,8 +228,7 @@ In diesem Talk schauen wir nüchtern darauf, wo Agentic Coding im SDLC echten Me
 
 ## 2026-05-20 | [Azure AI Frontier Day](https://msevents.microsoft.com/event?id=237206394)
 ### AI Won’t Fix Your Engineering Culture
-- Abstract: AI is embedding itself across the software development lifecycle, but it doesn't fix broken systems. It amplifies them. This talk reframes the conversation: engineering culture is the real constraint, not tooling. DevEx is the signal, Platform Engineering is the lever, and both are required before humans and agents can operate effectively. Agentic workflows expose weak foundations at speed and scale. Strong DevEx and platform capabilities become a multiplier. Everything else just gets louder.
-AI is not the solution, it is the amplifier.
+- Abstract: AI doesn't fix broken systems. It amplifies them. And right now, most organizations are learning that the hard way. This talk reframes the conversation: engineering culture is the real constraint, not tooling. DevEx is the signal. Platform Engineering is the lever. You need both before humans and agents can operate effectively. Agentic workflows don't wait for you to get your house in order. They expose weak foundations at speed and scale. Strong DevEx and platform capabilities become a multiplier. Everything else just gets louder.
 - Location: Munich, Germany
 - Language: 🇬🇧
 - Tags: Agentic AI, Software Development, Developer Experience, Platform Engineering, DevOps
