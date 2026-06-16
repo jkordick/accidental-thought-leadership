@@ -78,3 +78,34 @@ Create a `speaker.md` file in the project root to display your bio and social li
 Place your photo in the `public/` folder (e.g., `public/speaker.jpg`).
 
 Supported social platforms: LinkedIn, GitHub, Twitter/X, Bluesky, YouTube, Website (others will show a generic link icon).
+
+## Upcoming events
+
+Create an `upcoming.md` file in the project root to display a "Coming up" section above the timeline. Entries whose date is in the past are filtered out automatically on the next build, so you don't need to prune the list manually.
+
+### Format
+
+```markdown
+# Upcoming
+
+## YYYY-MM-DD | [Conference Name](https://conference-url.com)
+
+### [Talk Title](https://agenda-url.com)
+
+- Location: City, Country
+- Language: 🇬🇧
+- Tags: Tag1, Tag2
+```
+
+### Fields
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| Date | Yes | Format: `YYYY-MM-DD` |
+| Conference | Yes | `[Name](url)` format |
+| Title | Yes | Can be `### Title` or `### [Title](agenda-url)` |
+| Location | No | e.g., `Berlin, Germany` or `Remote` |
+| Language | No | Flag emoji, e.g., `🇬🇧`, `🇩🇪` |
+| Tags | No | Comma-separated list |
+
+The section is hidden entirely when there are no future entries.

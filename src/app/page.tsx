@@ -3,12 +3,21 @@ import { getPodcasts } from "@/lib/podcasts";
 import { getLivestreams } from "@/lib/livestreams";
 import { getWorkshops } from "@/lib/workshops";
 import { getBlogs } from "@/lib/blogs";
+import { getUpcoming } from "@/lib/upcoming";
 import { getSpeaker } from "@/lib/speaker";
 import { TalkCard, Appearance } from "@/components/TalkCard";
 import { SpeakerHeader } from "@/components/SpeakerHeader";
+import { UpcomingList } from "@/components/UpcomingList";
 
 export default async function Home() {
-  const [talks, podcasts, livestreams, workshops, blogs] = await Promise.all([getTalks(), getPodcasts(), getLivestreams(), getWorkshops(), getBlogs()]);
+  const [talks, podcasts, livestreams, workshops, blogs, upcoming] = await Promise.all([
+    getTalks(),
+    getPodcasts(),
+    getLivestreams(),
+    getWorkshops(),
+    getBlogs(),
+    getUpcoming(),
+  ]);
   const speaker = getSpeaker();
 
   // Merge and sort by date descending
@@ -48,6 +57,8 @@ export default async function Home() {
         </div>
 
         <div className="space-y-6 w-full">
+          {upcoming.length > 0 && <UpcomingList items={upcoming} />}
+
           {appearances.map((item) => (
             <TalkCard key={`${item.date}-${item.title}`} item={item} />
           ))}
