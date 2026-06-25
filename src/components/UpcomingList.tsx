@@ -1,5 +1,6 @@
 import React from 'react';
 import { UpcomingAppearance } from '@/lib/upcoming';
+import { NextCountdown } from './NextCountdown';
 
 interface UpcomingListProps {
   items: UpcomingAppearance[];
@@ -7,25 +8,6 @@ interface UpcomingListProps {
 
 export function UpcomingList({ items }: UpcomingListProps) {
   if (items.length === 0) return null;
-
-  const todayMs = Date.UTC(
-    new Date().getUTCFullYear(),
-    new Date().getUTCMonth(),
-    new Date().getUTCDate()
-  );
-  const nextDate = new Date(items[0].date);
-  const nextMs = Date.UTC(
-    nextDate.getUTCFullYear(),
-    nextDate.getUTCMonth(),
-    nextDate.getUTCDate()
-  );
-  const daysUntilNext = Math.max(0, Math.round((nextMs - todayMs) / 86_400_000));
-  const nextLabel =
-    daysUntilNext === 0
-      ? 'Next: today'
-      : daysUntilNext === 1
-      ? 'Next: tomorrow'
-      : `Next: in ${daysUntilNext} days`;
 
   return (
     <section
@@ -39,9 +21,7 @@ export function UpcomingList({ items }: UpcomingListProps) {
         >
           Coming up
         </h2>
-        <span className="text-xs text-teal-800/70 dark:text-teal-300/70 tabular-nums">
-          {nextLabel}
-        </span>
+        <NextCountdown date={items[0].date} />
       </div>
 
       <ul className="divide-y divide-teal-200/70 dark:divide-teal-900/40">
