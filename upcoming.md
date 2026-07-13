@@ -31,10 +31,26 @@
 - Language: 🇬🇧
 - Tags: Workshop, GitHub Copilot, AI-Native, Microsoft Build
 
-## 2026-07-08 | [WeAreDevelopers World Congress 2026](https://www.wearedevelopers.com/world-congress)
+## 2026-09-04 | [Azure Community Day](https://azure-community-day.de/)
 
-### [Spec-First Development: Building and Modernizing Apps with Agentic AI](https://www.wearedevelopers.com/world-congress/agenda/masterclasses/spec-first-development-building-and-modernizing-apps-with-ag)
+### AI Won't Fix Your Engineering Culture
 
-- Location: Berlin, Germany
+- Location: Cologne, Germany
+- Language: 🇩🇪
+- Tags: Talk, Agentic AI, Developer Experience, Platform Engineering
+
+## 2026-11-25 | [programmier.bar CON 2026 – Web & AI Edition](https://www.programmier.bar/konferenz/programmier-con-2026-web-ai-edition)
+
+### Talk title coming soon
+
+- Location: Bad Nauheim, Germany
+- Language: 🇩🇪
+- Tags: Talk, Agentic AI, Software Development
+
+## 2027-03-03 | [DevLand](https://www.devland.eu/de/)
+
+### Talk title coming soon
+
+- Location: Rust, Germany
 - Language: 🇬🇧
-- Tags: Masterclass, Agentic AI, Spec Kit, GitHub, Azure
+- Tags: Talk, Agentic AI, Software Development

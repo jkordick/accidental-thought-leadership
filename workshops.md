@@ -32,3 +32,24 @@
 - Location: Munich, Germany
 - Language: 🇬🇧
 - Tags: Agentic AI, GitHub Copilot, Hackathon, Software Development
+
+## 2026-07-08 | [WeAreDevelopers World Congress 2026](https://www.wearedevelopers.com/world-congress)
+### [Spec-First Development: Building and Modernizing Apps with Agentic AI](https://www.wearedevelopers.com/world-congress/agenda/masterclasses/spec-first-development-building-and-modernizing-apps-with-ag-1144169)
+- Repo: [GitHub](https://github.com/jkordick/wad-sdd-build-modernize)
+- Location: Berlin, Germany
+- Language: 🇬🇧
+- Tags: Agentic AI, Spec Kit, GitHub, Azure
+
+## 2026-07-09 | [WeAreDevelopers World Congress 2026](https://www.wearedevelopers.com/world-congress)
+### [Teaching GitHub Copilot COBOL: A Practical Guide to Agentic AI Legacy Modernization](https://www.wearedevelopers.com/world-congress/agenda/sessions/teaching-github-copilot-cobol-a-practical-guide-to-agentic-ai-legacy-modernizati-1259329)
+- Repo: [GitHub](https://github.com/jkordick/wad-ghcp-cobol)
+- Location: Berlin, Germany
+- Language: 🇬🇧
+- Tags: COBOL, GitHub Copilot, Agentic AI, Migration, Application Modernization
+
+## 2026-06-30 | [Microsoft Build 2026 Recap](https://msevents.microsoft.com/event?id=958083520)
+### Hands-On Workshop: Become an AI-Native Developer
+- Repo: [GitHub](https://github.com/jkordick/ghcp-advanced)
+- Location: Munich, Germany
+- Language: 🇬🇧
+- Tags: Agentic AI, GitHub Copilot, Software Development, Developer Experience

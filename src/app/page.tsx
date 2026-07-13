@@ -48,7 +48,7 @@ export default async function Home() {
             { label: 'Podcasts', count: podcasts.length },
             { label: 'Livestreams', count: livestreams.length },
             { label: 'Blogs', count: blogs.length },
-            { label: 'Tattoos', count: 23 },
+            { label: 'Tattoos', count: 25 },
           ].map(({ label, count }) => (
             <span key={label}>
               <span className="font-semibold text-gray-700 dark:text-gray-300">{count}</span> {label}

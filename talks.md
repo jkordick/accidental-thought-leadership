@@ -232,3 +232,28 @@ In diesem Talk schauen wir nüchtern darauf, wo Agentic Coding im SDLC echten Me
 - Location: Munich, Germany
 - Language: 🇬🇧
 - Tags: Agentic AI, Software Development, Developer Experience, Platform Engineering, DevOps
+
+## 2026-07-08 | [WeAreDevelopers World Congress 2026](https://www.wearedevelopers.com/world-congress)
+### [Fireside Chat with Julia Kordick](https://www.wearedevelopers.com/world-congress/agenda/sessions/fireside-chat-with-julia-kordick-sr-software-global-black-belt-1267978)
+- Location: Berlin, Germany
+- Language: 🇬🇧
+- Tags: Fireside Chat, Agentic AI, GitHub Copilot, Developer Experience
+
+## 2026-07-10 | [WeAreDevelopers World Congress 2026](https://www.wearedevelopers.com/world-congress)
+### [AI Won’t Fix Your Engineering Culture](https://www.wearedevelopers.com/world-congress/agenda/sessions/ai-won-t-fix-your-engineering-culture-1259279)
+- Abstract: AI doesn't fix broken systems. It amplifies them. And right now, most organizations are learning that the hard way. This talk reframes the conversation: engineering culture is the real constraint, not tooling. DevEx is the signal. Platform Engineering is the lever. You need both before humans and agents can operate effectively. Agentic workflows don't wait for you to get your house in order. They expose weak foundations at speed and scale. Strong DevEx and platform capabilities become a multiplier. Everything else just gets louder.
+- Location: Berlin, Germany
+- Language: 🇬🇧
+- Tags: Agentic AI, Software Development, Developer Experience, Platform Engineering, DevOps
+
+## 2026-07-10 | [WeAreDevelopers World Congress 2026](https://www.wearedevelopers.com/world-congress)
+### [The End of Commit-Fail-Commit: Rethinking CI with AI Agents and GitHub Actions](https://www.wearedevelopers.com/world-congress/agenda/sessions/the-end-of-commit-fail-commit-rethinking-ci-with-ai-agents-and-github-actions-1259291)
+- Location: Berlin, Germany
+- Language: 🇬🇧
+- Tags: CI, GitHub Actions, Agentic AI, Software Development
+
+## 2026-06-30 | [Microsoft Build 2026 Recap](https://msevents.microsoft.com/event?id=958083520)
+### After the Keynote – The Agentic SDLC Reality Check
+- Location: Munich, Germany
+- Language: 🇬🇧
+- Tags: Agentic AI, Software Development, SDLC, GitHub Copilot
