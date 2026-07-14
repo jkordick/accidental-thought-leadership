@@ -248,6 +248,7 @@ In diesem Talk schauen wir nüchtern darauf, wo Agentic Coding im SDLC echten Me
 
 ## 2026-07-10 | [WeAreDevelopers World Congress 2026](https://www.wearedevelopers.com/world-congress)
 ### [The End of Commit-Fail-Commit: Rethinking CI with AI Agents and GitHub Actions](https://www.wearedevelopers.com/world-congress/agenda/sessions/the-end-of-commit-fail-commit-rethinking-ci-with-ai-agents-and-github-actions-1259291)
+- Abstract: Your pipelines automate the predictable. But what about triaging issues, reviewing PRs, responding to incidents, and coordinating across tools? See what's new in GitHub Actions and how it's becoming the execution layer for AI agents across your dev lifecycle. We'll cover agent-triggered workflows, MCP server integration, and automated handoffs that keep humans in the loop — plus how to finally break the 'commit - see CI fail - commit again' loop.
 - Location: Berlin, Germany
 - Language: 🇬🇧
 - Tags: CI, GitHub Actions, Agentic AI, Software Development
