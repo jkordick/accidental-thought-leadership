@@ -47,5 +47,6 @@ In this session you will:
 • Build a baseline you can apply across Copilot, agents, and any model you use day to day
 
 For every developer working with AI tools, regardless of seniority. Especially useful for teams already using Copilot or agents who want to use them well.
+
 - Language: 🇬🇧
-- Tags: AI Builders, Tokens, Context, Cost, GitHub Copilot, Agents
+- Tags: Context Engineering, Beginners, Tokens, Context, Cost, GitHub Copilot, Agentic AI
