@@ -13,6 +13,8 @@ export interface Livestream {
   link: string;
   recording?: string;
   linkedin?: string;
+  repository?: string;
+  workshop?: string;
   language?: string;
   location?: string;
   tags: string[];
@@ -118,6 +120,28 @@ export async function getLivestreams(): Promise<Livestream[]> {
       }
     }
 
+    // 3c. Parse Repo (Optional)
+    const repoLine = lines.find(line => line.trim().startsWith('- Repo:'));
+    let repository: string | undefined;
+    if (repoLine) {
+      const repoRegex = /\[(.*?)\]\((.*?)\)/;
+      const repoMatch = repoLine.match(repoRegex);
+      if (repoMatch) {
+        repository = repoMatch[2];
+      }
+    }
+
+    // 3d. Parse Workshop (Optional)
+    const workshopLine = lines.find(line => line.trim().startsWith('- Workshop:'));
+    let workshop: string | undefined;
+    if (workshopLine) {
+      const workshopRegex = /\[(.*?)\]\((.*?)\)/;
+      const workshopMatch = workshopLine.match(workshopRegex);
+      if (workshopMatch) {
+        workshop = workshopMatch[2];
+      }
+    }
+
     // 4. Parse Tags
     const tagsLine = lines.find(line => line.trim().startsWith('- Tags:'));
     let tags: string[] = [];
@@ -184,6 +208,8 @@ export async function getLivestreams(): Promise<Livestream[]> {
       link,
       recording,
       linkedin,
+      repository,
+      workshop,
       language,
       location,
       tags,
@@ -195,7 +221,7 @@ export async function getLivestreams(): Promise<Livestream[]> {
 
   // Fetch abstracts and thumbnails in parallel
   const livestreamsWithMetadata = await Promise.all(parsedLivestreams.map(async (livestream) => {
-    let updatedLivestream = { ...livestream };
+    const updatedLivestream = { ...livestream };
     
     // Fetch abstract if not provided
     if (!livestream.abstract && livestream.link && livestream.link.startsWith('http')) {

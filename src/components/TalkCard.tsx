@@ -50,7 +50,8 @@ export function TalkCard({ item }: TalkCardProps) {
   const recordingLink = isBlog ? undefined : item.recording;
   const linkedinLink = isPodcast || isLivestream || isBlog ? undefined : item.linkedin;
   const slidesLink = item.type === 'talk' ? item.slides : undefined;
-  const repoLink = (item.type === 'talk' || item.type === 'workshop') ? item.repository : undefined;
+  const repoLink = (item.type === 'talk' || item.type === 'workshop' || item.type === 'livestream') ? item.repository : undefined;
+  const workshopLink = item.type === 'livestream' ? item.workshop : undefined;
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   // Thumbnail image (podcasts, livestreams, and blogs)
@@ -166,14 +167,14 @@ export function TalkCard({ item }: TalkCardProps) {
           )}
         </div>
         
-        {(recordingLink || linkedinLink || slidesLink || repoLink) && (
-          <div className="flex flex-row md:flex-col gap-3 shrink-0 pt-2 md:pt-0">
+        {(recordingLink || linkedinLink || slidesLink || repoLink || workshopLink) && (
+          <div className="flex flex-wrap md:w-32 md:flex-col gap-3 shrink-0 pt-2 md:pt-0">
             {recordingLink && (
               <a
                 href={recordingLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`inline-flex justify-center items-center px-4 py-2 text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors ${
+                className={`inline-flex min-h-10 flex-1 basis-28 md:w-full md:flex-none md:basis-auto justify-center items-center px-4 py-2 text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors ${
                   isPodcast || isLivestream
                     ? 'text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600'
                     : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 dark:bg-zinc-800 dark:text-gray-200 dark:border-zinc-700 dark:hover:bg-zinc-700'
@@ -187,7 +188,7 @@ export function TalkCard({ item }: TalkCardProps) {
                 href={linkedinLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex justify-center items-center px-4 py-2 text-sm font-medium text-white bg-[#0A66C2] rounded-md hover:bg-[#004182] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0A66C2] transition-colors"
+                className="inline-flex min-h-10 flex-1 basis-28 md:w-full md:flex-none md:basis-auto justify-center items-center px-4 py-2 text-sm font-medium text-white bg-[#0A66C2] rounded-md hover:bg-[#004182] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0A66C2] transition-colors"
               >
                 LinkedIn
               </a>
@@ -197,7 +198,7 @@ export function TalkCard({ item }: TalkCardProps) {
                 href={slidesLink.startsWith('/') ? `${basePath}${slidesLink}` : slidesLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex justify-center items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-600 transition-colors"
+                className="inline-flex min-h-10 flex-1 basis-28 md:w-full md:flex-none md:basis-auto justify-center items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-blue-700 dark:hover:bg-blue-600 transition-colors"
               >
                 Slides
               </a>
@@ -207,9 +208,23 @@ export function TalkCard({ item }: TalkCardProps) {
                 href={repoLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex justify-center items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-zinc-800 dark:text-gray-200 dark:border-zinc-700 dark:hover:bg-zinc-700 transition-colors"
+                className={`inline-flex min-h-10 flex-1 basis-28 md:w-full md:flex-none md:basis-auto justify-center items-center px-4 py-2 text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors ${
+                  isLivestream
+                    ? 'text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600'
+                    : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 dark:bg-zinc-800 dark:text-gray-200 dark:border-zinc-700 dark:hover:bg-zinc-700'
+                }`}
               >
                 Repo
+              </a>
+            )}
+            {workshopLink && (
+              <a
+                href={workshopLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-10 flex-1 basis-28 md:w-full md:flex-none md:basis-auto justify-center items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-zinc-800 dark:text-gray-200 dark:border-zinc-700 dark:hover:bg-zinc-700 transition-colors"
+              >
+                Workshop
               </a>
             )}
           </div>

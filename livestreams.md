@@ -48,5 +48,7 @@ In this session you will:
 
 For every developer working with AI tools, regardless of seniority. Especially useful for teams already using Copilot or agents who want to use them well.
 
+- Repo: [GitHub](https://github.com/jkordick/ghcp-advanced)
+- Workshop: [MOAW](https://moaw.dev/workshop/gh:jkordick/ghcp-advanced/main/docs/?step=7)
 - Language: 🇬🇧
 - Tags: Context Engineering, Beginners, Tokens, Context, Cost, GitHub Copilot, Agentic AI

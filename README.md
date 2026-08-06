@@ -52,6 +52,18 @@ It can span multiple paragraphs.
 | Language | No | Flag emoji, e.g., `🇬🇧`, `🇩🇪` |
 | Tags | No | Comma-separated list |
 
+## Livestreams
+
+Create a `livestreams.md` file in the project root using the same entry structure as talks. Livestream entries also support these resource links:
+
+```markdown
+- Recording: [YouTube](https://youtube.com/watch?v=...)
+- Repo: [GitHub](https://github.com/owner/repository)
+- Workshop: [Workshop](https://workshop-url.com)
+```
+
+`Recording`, `Repo`, and `Workshop` links render as action buttons on the livestream card.
+
 ## Speaker Profile
 
 Create a `speaker.md` file in the project root to display your bio and social links in the header.
