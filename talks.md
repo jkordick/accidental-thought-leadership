@@ -258,3 +258,10 @@ In diesem Talk schauen wir nüchtern darauf, wo Agentic Coding im SDLC echten Me
 - Location: Munich, Germany
 - Language: 🇬🇧
 - Tags: Agentic AI, Software Development, SDLC, GitHub Copilot
+
+## 2026-08-25 | [PPP: Partner Project Party – Summer Edition](https://www.eventbrite.de/e/ppp-partner-project-party-summer-edition-tickets-1989386351129)
+### GitHub Copilot für Projektmanagement
+- Abstract: Kurz-Impuls im Nachmittagsblock „Urlaub von Word & Excel – Das richtige Tool für die Reise, nicht nur fürs Ticket“: Wie GitHub Copilot im Projektmanagement unterstützt – von Planung über Kommunikation bis hin zu Delivery.
+- Location: Cologne, Germany
+- Language: 🇩🇪
+- Tags: GitHub Copilot, Project Management, Agentic AI
