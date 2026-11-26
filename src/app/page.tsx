@@ -3,6 +3,7 @@ import { getPodcasts } from "@/lib/podcasts";
 import { getLivestreams } from "@/lib/livestreams";
 import { getWorkshops } from "@/lib/workshops";
 import { getBlogs } from "@/lib/blogs";
+import { getSupport } from "@/lib/support";
 import { getUpcoming } from "@/lib/upcoming";
 import { getSpeaker } from "@/lib/speaker";
 import { TalkCard, Appearance } from "@/components/TalkCard";
@@ -10,18 +11,19 @@ import { SpeakerHeader } from "@/components/SpeakerHeader";
 import { UpcomingList } from "@/components/UpcomingList";
 
 export default async function Home() {
-  const [talks, podcasts, livestreams, workshops, blogs, upcoming] = await Promise.all([
+  const [talks, podcasts, livestreams, workshops, blogs, support, upcoming] = await Promise.all([
     getTalks(),
     getPodcasts(),
     getLivestreams(),
     getWorkshops(),
     getBlogs(),
+    getSupport(),
     getUpcoming(),
   ]);
   const speaker = getSpeaker();
 
   // Merge and sort by date descending
-  const appearances: Appearance[] = [...talks, ...podcasts, ...livestreams, ...workshops, ...blogs].sort(
+  const appearances: Appearance[] = [...talks, ...podcasts, ...livestreams, ...workshops, ...blogs, ...support].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 
@@ -48,6 +50,7 @@ export default async function Home() {
             { label: 'Podcasts', count: podcasts.length },
             { label: 'Livestreams', count: livestreams.length },
             { label: 'Blogs', count: blogs.length },
+            { label: 'Support', count: support.length },
             { label: 'Tattoos', count: 25 },
           ].map(({ label, count }) => (
             <span key={label}>

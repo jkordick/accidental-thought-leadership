@@ -265,3 +265,43 @@ In diesem Talk schauen wir nüchtern darauf, wo Agentic Coding im SDLC echten Me
 - Location: Cologne, Germany
 - Language: 🇩🇪
 - Tags: GitHub Copilot, Project Management, Agentic AI
+
+## 2026-09-04 | [Azure Community Day](https://azure-community-day.de/)
+### AI Won't Fix Your Engineering Culture
+- Location: Cologne, Germany
+- Language: 🇩🇪
+- Tags: Agentic AI, Developer Experience, Platform Engineering, Software Development
+
+## 2026-10-22 | [Microsoft Frontier Tour Cologne](https://frontiertour.microsoft.com/flow/microsoft/cologne27/citylanding/page/cityhome)
+### [GitHub Copilot App: enabling agentic workflow](https://frontiertour.microsoft.com/flow/microsoft/cologne27/sessioncatalog/page/sessioncatalog/session/1785348496484001Eq5F)
+- Abstract: Watch the GitHub Copilot App turn issues into action: automate your daily flow, then orchestrate multiple agents working in parallel on real code.
+- Location: Cologne, Germany
+- Tags: Lightning Talk, GitHub Copilot, Agentic AI
+
+## 2026-11-02 | [GS UK Conference 2026](https://conferences.gs-uk.org/2026)
+### [AI Won't Fix Your Engineering Culture](https://conferences.gs-uk.org/2026/agenda)
+- Abstract: AI doesn't fix broken processes. It amplifies them. And it does not get easier if these processes do not align with modern cloud native principles. And right now, most organizations are learning that the hard way. This talk reframes the conversation: engineering culture is the real constraint, not tooling. DevEx is the signal. Platform Engineering is the lever. You need both before humans and agents can operate effectively. Agentic workflows don't wait for you to get your house in order. They expose weak foundations at speed and scale. Strong DevEx and platform capabilities become a multiplier. Everything else just gets louder.
+- Location: Whittlebury, United Kingdom
+- Language: 🇬🇧
+- Tags: Agentic AI, Developer Experience, Platform Engineering, Mainframe
+
+## 2026-11-04 | [GS UK Conference 2026](https://conferences.gs-uk.org/2026)
+### [The Open Source Mainframe Modernisation Agent Framework: Building AI-Powered COBOL Modernization](https://conferences.gs-uk.org/2026/agenda)
+- Abstract: Modernizing mainframe applications requires more than translating COBOL into another language. In this session, we'll demonstrate an open-source AI agent framework that helps analyze legacy applications, reverse engineer business logic, map dependencies, and accelerate modernization to Java or .NET. You'll see live demonstrations of AI-assisted workflows using GitHub Models, Azure OpenAI, MCP, Neo4j, and static analysis, along with practical lessons learned from enterprise modernization projects. Attendees will leave with reusable architectural patterns and ideas for applying AI to large-scale mainframe modernization.
+- Location: Whittlebury, United Kingdom
+- Language: 🇬🇧
+- Tags: COBOL, Mainframe, Agentic AI, Application Modernization, Open Source
+
+## 2026-11-04 | [GS UK Conference 2026](https://conferences.gs-uk.org/2026)
+### [Agentic SDLC: How to apply agentic AI end to end for mainframe environments](https://conferences.gs-uk.org/2026/agenda)
+- Abstract: Agentic AI is changing how software gets built, from how requirements are captured and specifications written to how code is generated, tested, and deployed. This session walks through the full agentic SDLC end to end and shows how GitHub Copilot supports each stage: requirement refinement, discovery, architecture, implementation, validation, and delivery. We'll look at what this means specifically for mainframe environments, where the business logic is deep, the quality bar is high, and the stakes of getting it wrong are real. You'll leave with a practical picture of how human judgment, deterministic structures and AI execution combine into a modern development pipeline and where to start.
+- Location: Whittlebury, United Kingdom
+- Language: 🇬🇧
+- Tags: Agentic AI, SDLC, GitHub Copilot, Mainframe
+
+## 2026-11-25 | [programmier.con 2026 – Web & AI Edition](https://www.programmier.bar/konferenz/programmier-con-2026-web-ai-edition)
+### KI-Agenten im SDLC: Truth or Dare
+- Abstract: Alle reden darüber, dass KI-Agenten den Software Development Lifecycle transformieren. Aber was davon existiert nur in KI-FOMO-Posts auf X und was stimmt heute schon? Julia Kordick spielt mit euch „Truth or Dare“ und gemeinsam machen wir zwar keinen Deep Dive in Tools, dafür aber in jede Phase des SDLC. Dabei lösen wir (hoffentlich) reale Probleme und ihr geht mit einer realistischen Einschätzung aus dem Talk heraus, welche KI-Wahrheiten unter welchen Bedingungen echt sind.
+- Location: Bad Nauheim, Germany
+- Language: 🇩🇪
+- Tags: Agentic AI, SDLC, Software Development

@@ -54,3 +54,10 @@
 - Location: Munich, Germany
 - Language: 🇬🇧
 - Tags: Agentic AI, GitHub Copilot, Software Development, Developer Experience
+
+## 2026-11-04 | [GS UK Conference 2026](https://conferences.gs-uk.org/2026)
+### [BYOD Lab: Agentic SDLC with GitHub Copilot in a mainframe codebase](https://conferences.gs-uk.org/2026/agenda)
+- Abstract: In this hands-on lab, you'll apply the full agentic SDLC to a real COBOL codebase. We'll work through every stage: using GitHub Copilot's agentic capabilities to refine requirements, discover and document existing code, build structured specifications, plan architecture decisions, implement and modernize COBOL to Java. The codebase is mainframe. The practices are universal. You'll use agentic coding techniques, deterministic guardrails, and human oversight to stay in control while Copilot does the heavy lifting. By the end, you'll have a repeatable approach to running an agentic development pipeline on complex code and a realistic sense of where AI accelerates the work, where it needs guardrails, and where your judgment is still the thing that matters.
+- Location: Whittlebury, United Kingdom
+- Language: 🇬🇧
+- Tags: COBOL, Mainframe, GitHub Copilot, Agentic AI, Application Modernization

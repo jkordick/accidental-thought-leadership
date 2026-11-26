@@ -6,8 +6,9 @@ import { Podcast } from '@/lib/podcasts';
 import { Livestream } from '@/lib/livestreams';
 import { Workshop } from '@/lib/workshops';
 import { Blog } from '@/lib/blogs';
+import { Support } from '@/lib/support';
 
-export type Appearance = Talk | Podcast | Livestream | Workshop | Blog;
+export type Appearance = Talk | Podcast | Livestream | Workshop | Blog | Support;
 
 interface TalkCardProps {
   item: Appearance;
@@ -30,6 +31,7 @@ export function TalkCard({ item }: TalkCardProps) {
   const isLivestream = item.type === 'livestream';
   const isWorkshop = item.type === 'workshop';
   const isBlog = item.type === 'blog';
+  const isSupport = item.type === 'support';
   const abstract = item.abstract;
   const isLongAbstract = abstract && abstract.length > ABSTRACT_CHAR_LIMIT;
   const displayedAbstract = abstract && isLongAbstract && !isExpanded
@@ -47,8 +49,8 @@ export function TalkCard({ item }: TalkCardProps) {
 
   // Links
   const agendaLink = isPodcast ? undefined : item.link;
-  const recordingLink = isBlog ? undefined : item.recording;
-  const linkedinLink = isPodcast || isLivestream || isBlog ? undefined : item.linkedin;
+  const recordingLink = isBlog || isSupport ? undefined : item.recording;
+  const linkedinLink = isPodcast || isLivestream || isBlog || isSupport ? undefined : item.linkedin;
   const slidesLink = item.type === 'talk' ? item.slides : undefined;
   const repoLink = (item.type === 'talk' || item.type === 'workshop' || item.type === 'livestream') ? item.repository : undefined;
   const workshopLink = item.type === 'livestream' ? item.workshop : undefined;
@@ -95,6 +97,10 @@ export function TalkCard({ item }: TalkCardProps) {
             ) : isBlog ? (
               <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300">
                 Blog
+              </span>
+            ) : isSupport ? (
+              <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-teal-100 text-teal-700 dark:bg-teal-900 dark:text-teal-300">
+                {item.role}
               </span>
             ) : (
               <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300">

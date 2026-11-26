@@ -64,6 +64,26 @@ Create a `livestreams.md` file in the project root using the same entry structur
 
 `Recording`, `Repo`, and `Workshop` links render as action buttons on the livestream card.
 
+## Support
+
+Create a `support.md` file in the project root for sessions you supported without being the main speaker (e.g. lab proctoring or hackathon coaching). Entries appear in the timeline with a badge showing the role.
+
+```markdown
+# Support
+
+## YYYY-MM-DD | [Event Name](https://event-url.com)
+
+### [Session Title](https://session-url.com)
+
+- Role: Proctor
+- Abstract: Short description of the session.
+- Location: San Francisco, USA
+- Language: 🇬🇧
+- Tags: Tag1, Tag2
+```
+
+Supports the same fields as talks except `Recording` and `LinkedIn`, plus `Role` (e.g. `Proctor`, `Coach`; defaults to `Support`).
+
 ## Speaker Profile
 
 Create a `speaker.md` file in the project root to display your bio and social links in the header.
