@@ -268,6 +268,7 @@ In diesem Talk schauen wir nüchtern darauf, wo Agentic Coding im SDLC echten Me
 
 ## 2026-09-04 | [Azure Community Day](https://azure-community-day.de/)
 ### AI Won't Fix Your Engineering Culture
+- Abstract: AI doesn't fix broken systems. It amplifies them. And right now, most organizations are learning that the hard way. This talk reframes the conversation: engineering culture is the real constraint, not tooling. DevEx is the signal. Platform Engineering is the lever. You need both before humans and agents can operate effectively. Agentic workflows don't wait for you to get your house in order. They expose weak foundations at speed and scale. Strong DevEx and platform capabilities become a multiplier. Everything else just gets louder.
 - Location: Cologne, Germany
 - Language: 🇩🇪
 - Tags: Agentic AI, Developer Experience, Platform Engineering, Software Development
@@ -276,6 +277,7 @@ In diesem Talk schauen wir nüchtern darauf, wo Agentic Coding im SDLC echten Me
 ### [GitHub Copilot App: enabling agentic workflow](https://frontiertour.microsoft.com/flow/microsoft/cologne27/sessioncatalog/page/sessioncatalog/session/1785348496484001Eq5F)
 - Abstract: Watch the GitHub Copilot App turn issues into action: automate your daily flow, then orchestrate multiple agents working in parallel on real code.
 - Location: Cologne, Germany
+- Language: 🇬🇧
 - Tags: Lightning Talk, GitHub Copilot, Agentic AI
 
 ## 2026-11-02 | [GS UK Conference 2026](https://conferences.gs-uk.org/2026)

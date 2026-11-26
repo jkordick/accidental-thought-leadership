@@ -15,10 +15,18 @@
   - Tags: Tag1, Tag2            (optional; comma-separated)
 -->
 
-## 2027-03-03 | [DevLand](https://www.devland.eu/de/)
+## 2026-12-04 | [AI Coding Summit Berlin](https://aicodingsummit.com/berlin/)
 
-### Talk title coming soon
+### [Agentic AI Can Modernize It. But can you Prove it Did?](https://gitnation.com/contents/agentic-ai-can-modernize-it-but-can-you-prove-it-did)
+
+- Location: Berlin, Germany
+- Language: 🇬🇧
+- Tags: Talk, Agentic AI, Application Modernization
+
+## 2027-03-04 | [DevLand](https://www.devland.eu/de/)
+
+### [Agentic AI Can Modernize Your Systems. But Can You Prove it Did?](https://my.doag.org/events/devland/2027/agenda/#eventDay.1804114800)
 
 - Location: Rust, Germany
 - Language: 🇬🇧
-- Tags: Talk, Agentic AI, Software Development
+- Tags: Talk, Agentic AI, Application Modernization
