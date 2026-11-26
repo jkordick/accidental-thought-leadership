@@ -24,7 +24,7 @@ Project repo: aka.ms/cobol
 
 - Language: 🇩🇪
 - Recording: [YouTube](https://www.youtube.com/watch?v=Lt3hffRQU0U&list=PLmsFUfdnGr3yB6L2Cz02gSOeOp3snMKIm)
-- Tags: MCP, Model Context Protocol, AI, Java
+- Tags: MCP, AI, Java
 
 ## 2026-03-18 | [WeAreDevelopers](https://www.youtube.com/@_wearedevs)
 ### WeAreDevelopers LIVE - SpeculAItions (Spec-driven AI development)
@@ -51,4 +51,4 @@ For every developer working with AI tools, regardless of seniority. Especially u
 - Repo: [GitHub](https://github.com/jkordick/ghcp-advanced)
 - Workshop: [MOAW](https://moaw.dev/workshop/gh:jkordick/ghcp-advanced/main/docs/?step=7)
 - Language: 🇬🇧
-- Tags: Context Engineering, Beginners, Tokens, Context, Cost, GitHub Copilot, Agentic AI
+- Tags: Context Engineering, Beginners, Tokens, Cost, GitHub Copilot, Agentic AI

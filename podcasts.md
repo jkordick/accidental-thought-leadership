@@ -41,4 +41,4 @@ Gäste: Julia Kordick – Global Black Belt @ MicrosoftFlorian Lenz – Azure Co
 - Abstract: On this episode of Coffee with Developers we're joined by Microsoft Senior Software Global Black Belt Julia Kordick to discuss all the ways you can modernise older codebases and build new ones with agentic coding.
 - Recording: [Listen](https://www.wearedevelopers.com/en/videos/1832/building-and-modernising-apps-with-agentic-ai-julia-kordick)
 - Language: 🇬🇧
-- Tags: AI, Agentic AI, Software Development, App Modernization
+- Tags: AI, Agentic AI, Software Development, Application Modernization

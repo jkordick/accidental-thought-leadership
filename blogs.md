@@ -11,7 +11,7 @@
 ### [How We Use AI Agents for COBOL Migration and Mainframe Modernization](https://devblogs.microsoft.com/all-things-azure/how-we-use-ai-agents-for-cobol-migration-and-mainframe-modernization/)
 
 - Language: 🇬🇧
-- Tags: COBOL, Mainframe Modernization, Agentic AI, Software Development
+- Tags: COBOL, Mainframe, Application Modernization, Agentic AI, Software Development
 
 ## 2025-10-14 | [GitHub Blog](https://github.blog/)
 ### [How GitHub Copilot and AI agents are saving legacy systems](https://github.blog/ai-and-ml/github-copilot/how-github-copilot-and-ai-agents-are-saving-legacy-systems/)
